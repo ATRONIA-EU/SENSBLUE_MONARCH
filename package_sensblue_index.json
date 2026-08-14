@@ -1,15 +1,5 @@
 {
-  "_comment": [
-    "Board Manager index for the SensBlue Monarch Arduino support package.",
-    "The 'url', 'archiveFileName', 'checksum' and 'size' fields under each",
-    "platform entry are automatically updated by tools/build_release.sh.",
-    "Do not edit them by hand.",
-    "",
-    "This index re-uses the toolchain from the Espressif esp32 core; the",
-    "user does NOT need to install the esp32 core separately — the Board",
-    "Manager will fetch the tools listed under 'toolsDependencies'."
-  ],
-  "packages": [
+ "packages": [
     {
       "name": "sensblue-monarch",
       "maintainer": "ATRONIA, Lda.",
