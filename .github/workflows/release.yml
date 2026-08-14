@@ -1,0 +1,83 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (without the leading "v"), e.g. 0.1.0'
+        required: true
+      upstream_ref:
+        description: 'arduino-esp32 ref to bundle (branch or tag)'
+        required: false
+        default: '3.3.2'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Resolve version and upstream ref
+        id: v
+        run: |
+          if [[ -n "${{ github.event.inputs.version }}" ]]; then
+            VERSION="${{ github.event.inputs.version }}"
+            UPSTREAM="${{ github.event.inputs.upstream_ref }}"
+          else
+            TAG="${GITHUB_REF#refs/tags/}"
+            VERSION="${TAG#v}"
+            UPSTREAM="3.3.2"
+          fi
+          echo "version=$VERSION"     >> "$GITHUB_OUTPUT"
+          echo "tag=v$VERSION"        >> "$GITHUB_OUTPUT"
+          echo "upstream=$UPSTREAM"   >> "$GITHUB_OUTPUT"
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq bzip2
+
+      - name: Build tarball
+        run: |
+          chmod +x tools/build_release.sh
+          ./tools/build_release.sh \
+              "${{ steps.v.outputs.version }}" \
+              "${{ steps.v.outputs.upstream }}"
+
+      - name: Commit updated package index back to main
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package_sensblue_index.json
+          if git diff --cached --quiet; then
+            echo "No index changes to commit."
+          else
+            git commit -m "chore: update package index for ${{ steps.v.outputs.tag }} [skip ci]"
+            git push origin main
+          fi
+
+      - name: Create tag if run via workflow_dispatch
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          git tag "${{ steps.v.outputs.tag }}"
+          git push origin "${{ steps.v.outputs.tag }}"
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.v.outputs.tag }}
+          name: SensBlue Monarch ${{ steps.v.outputs.tag }}
+          files: dist/sensblue-monarch-${{ steps.v.outputs.version }}.tar.bz2
+          generate_release_notes: true
+          fail_on_unmatched_files: true
