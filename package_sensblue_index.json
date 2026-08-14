@@ -26,13 +26,15 @@
           "category": "Contributed",
           "url": "https://github.com/sensblue-monarch/arduino-monarch/releases/download/v0.1.0/sensblue-monarch-0.1.0.tar.bz2",
           "archiveFileName": "sensblue-monarch-0.1.0.tar.bz2",
-          "checksum": "SHA-256:REPLACE_ME_ON_RELEASE",
-          "size": "0",
+          "checksum": "SHA-256:c095fb050d2036591bd50184a2c7505d368e8f904980c3de303b41f6c6dba9e4",
+          "size": "37360080",
           "help": {
             "online": "https://github.com/sensblue-monarch/arduino-monarch#readme"
           },
           "boards": [
-            { "name": "ATRONIA SensBlue Monarch" }
+            {
+              "name": "ATRONIA SensBlue Monarch"
+            }
           ],
           "toolsDependencies": [
             {
