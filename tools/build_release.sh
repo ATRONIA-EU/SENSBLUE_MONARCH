@@ -47,7 +47,7 @@ echo "==> Appending our boards.txt entries..."
     echo ""
     echo "########## SensBlue Monarch ##########"
     cat "$REPO_ROOT/boards_snippet.txt"
-} >> "$STAGE_DIR/boards.txt"
+} > "$STAGE_DIR/boards.txt"
 
 echo "==> Bundling on-board library..."
 mkdir -p "$STAGE_DIR/libraries/SensBlueMonarch"
