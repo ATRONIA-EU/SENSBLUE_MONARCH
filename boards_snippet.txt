@@ -1,0 +1,94 @@
+##############################################################
+# ATRONIA SensBlue Monarch
+# ESP32-WROOM-32E-N8 (8 MB flash, no PSRAM)
+# USB-UART: CP2102N with DTR/RTS auto-reset/boot
+##############################################################
+
+sensblue_monarch.name=ATRONIA SensBlue Monarch
+
+sensblue_monarch.bootloader.tool=esptool_py
+sensblue_monarch.bootloader.tool.default=esptool_py
+sensblue_monarch.upload.tool=esptool_py
+sensblue_monarch.upload.tool.default=esptool_py
+sensblue_monarch.upload.tool.network=esp_ota
+
+sensblue_monarch.upload.maximum_size=1310720
+sensblue_monarch.upload.maximum_data_size=327680
+sensblue_monarch.upload.flags=
+sensblue_monarch.upload.extra_flags=
+sensblue_monarch.upload.use_1200bps_touch=false
+sensblue_monarch.upload.wait_for_upload_port=false
+
+sensblue_monarch.serial.disableDTR=false
+sensblue_monarch.serial.disableRTS=false
+
+sensblue_monarch.build.tarch=xtensa
+sensblue_monarch.build.bootloader_addr=0x1000
+sensblue_monarch.build.target=esp32
+sensblue_monarch.build.mcu=esp32
+sensblue_monarch.build.core=esp32
+sensblue_monarch.build.variant=sensblue_monarch
+sensblue_monarch.build.board=SENSBLUE_MONARCH
+
+sensblue_monarch.build.f_cpu=240000000L
+sensblue_monarch.build.flash_size=8MB
+sensblue_monarch.build.flash_freq=80m
+sensblue_monarch.build.flash_mode=dio
+sensblue_monarch.build.boot=dio
+sensblue_monarch.build.partitions=default_8MB
+sensblue_monarch.build.defines=
+
+sensblue_monarch.menu.UploadSpeed.921600=921600
+sensblue_monarch.menu.UploadSpeed.921600.upload.speed=921600
+sensblue_monarch.menu.UploadSpeed.460800=460800
+sensblue_monarch.menu.UploadSpeed.460800.upload.speed=460800
+sensblue_monarch.menu.UploadSpeed.115200=115200
+sensblue_monarch.menu.UploadSpeed.115200.upload.speed=115200
+
+sensblue_monarch.menu.CPUFreq.240=240 MHz (WiFi/BT)
+sensblue_monarch.menu.CPUFreq.240.build.f_cpu=240000000L
+sensblue_monarch.menu.CPUFreq.160=160 MHz (WiFi/BT)
+sensblue_monarch.menu.CPUFreq.160.build.f_cpu=160000000L
+sensblue_monarch.menu.CPUFreq.80=80 MHz (WiFi/BT)
+sensblue_monarch.menu.CPUFreq.80.build.f_cpu=80000000L
+sensblue_monarch.menu.CPUFreq.40=40 MHz
+sensblue_monarch.menu.CPUFreq.40.build.f_cpu=40000000L
+sensblue_monarch.menu.CPUFreq.20=20 MHz
+sensblue_monarch.menu.CPUFreq.20.build.f_cpu=20000000L
+sensblue_monarch.menu.CPUFreq.10=10 MHz
+sensblue_monarch.menu.CPUFreq.10.build.f_cpu=10000000L
+
+sensblue_monarch.menu.FlashMode.dio=DIO
+sensblue_monarch.menu.FlashMode.dio.build.flash_mode=dio
+sensblue_monarch.menu.FlashMode.dio.build.boot=dio
+sensblue_monarch.menu.FlashMode.qio=QIO
+sensblue_monarch.menu.FlashMode.qio.build.flash_mode=dio
+sensblue_monarch.menu.FlashMode.qio.build.boot=qio
+
+sensblue_monarch.menu.FlashFreq.80=80MHz
+sensblue_monarch.menu.FlashFreq.80.build.flash_freq=80m
+sensblue_monarch.menu.FlashFreq.40=40MHz
+sensblue_monarch.menu.FlashFreq.40.build.flash_freq=40m
+
+sensblue_monarch.menu.PartitionScheme.default_8MB=Default 8MB (3MB APP x2, 1.5MB SPIFFS)
+sensblue_monarch.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+sensblue_monarch.menu.PartitionScheme.default_8MB.upload.maximum_size=3342336
+sensblue_monarch.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (large APPS with OTA)
+sensblue_monarch.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+sensblue_monarch.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+sensblue_monarch.menu.PartitionScheme.no_ota=No OTA (2MB APP / 6.5MB SPIFFS)
+sensblue_monarch.menu.PartitionScheme.no_ota.build.partitions=no_ota
+sensblue_monarch.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+
+sensblue_monarch.menu.DebugLevel.none=None
+sensblue_monarch.menu.DebugLevel.none.build.code_debug=0
+sensblue_monarch.menu.DebugLevel.error=Error
+sensblue_monarch.menu.DebugLevel.error.build.code_debug=1
+sensblue_monarch.menu.DebugLevel.warn=Warn
+sensblue_monarch.menu.DebugLevel.warn.build.code_debug=2
+sensblue_monarch.menu.DebugLevel.info=Info
+sensblue_monarch.menu.DebugLevel.info.build.code_debug=3
+sensblue_monarch.menu.DebugLevel.debug=Debug
+sensblue_monarch.menu.DebugLevel.debug.build.code_debug=4
+sensblue_monarch.menu.DebugLevel.verbose=Verbose
+sensblue_monarch.menu.DebugLevel.verbose.build.code_debug=5
