@@ -16,25 +16,67 @@
           "category": "Contributed",
           "url": "https://github.com/sensblue-monarch/arduino-monarch/releases/download/v0.1.2/sensblue-monarch-0.1.2.tar.bz2",
           "archiveFileName": "sensblue-monarch-0.1.2.tar.bz2",
-          "checksum": "SHA-256:REPLACE_ME_ON_RELEASE",
-          "size": "0",
+          "checksum": "SHA-256:b87b6a980d738f2f9afc222fd2fbcf3cb87be7246510fff0fb9a3b9389c8f7ac",
+          "size": "37202660",
           "help": {
             "online": "https://github.com/sensblue-monarch/arduino-monarch#readme"
           },
           "boards": [
-            { "name": "ATRONIA SensBlue Monarch" }
+            {
+              "name": "ATRONIA SensBlue Monarch"
+            }
           ],
           "toolsDependencies": [
-            { "packager": "esp32",   "name": "esp32-arduino-libs",  "version": "idf-release_v5.5-07e9bf49-v1" },
-            { "packager": "esp32",   "name": "esp-x32",             "version": "2507" },
-            { "packager": "esp32",   "name": "xtensa-esp-elf-gdb",  "version": "16.3_20250913" },
-            { "packager": "esp32",   "name": "esp-rv32",            "version": "2507" },
-            { "packager": "esp32",   "name": "riscv32-esp-elf-gdb", "version": "16.3_20250913" },
-            { "packager": "esp32",   "name": "openocd-esp32",       "version": "v0.12.0-esp32-20250707" },
-            { "packager": "esp32",   "name": "esptool_py",          "version": "5.1.0" },
-            { "packager": "esp32",   "name": "mkspiffs",            "version": "0.2.3" },
-            { "packager": "esp32",   "name": "mklittlefs",          "version": "4.0.2-db0513a" },
-            { "packager": "arduino", "name": "dfu-util",            "version": "0.11.0-arduino5" }
+            {
+              "packager": "esp32",
+              "name": "esp32-arduino-libs",
+              "version": "idf-release_v5.5-07e9bf49-v1"
+            },
+            {
+              "packager": "esp32",
+              "name": "esp-x32",
+              "version": "2507"
+            },
+            {
+              "packager": "esp32",
+              "name": "xtensa-esp-elf-gdb",
+              "version": "16.3_20250913"
+            },
+            {
+              "packager": "esp32",
+              "name": "esp-rv32",
+              "version": "2507"
+            },
+            {
+              "packager": "esp32",
+              "name": "riscv32-esp-elf-gdb",
+              "version": "16.3_20250913"
+            },
+            {
+              "packager": "esp32",
+              "name": "openocd-esp32",
+              "version": "v0.12.0-esp32-20250707"
+            },
+            {
+              "packager": "esp32",
+              "name": "esptool_py",
+              "version": "5.1.0"
+            },
+            {
+              "packager": "esp32",
+              "name": "mkspiffs",
+              "version": "0.2.3"
+            },
+            {
+              "packager": "esp32",
+              "name": "mklittlefs",
+              "version": "4.0.2-db0513a"
+            },
+            {
+              "packager": "arduino",
+              "name": "dfu-util",
+              "version": "0.11.0-arduino5"
+            }
           ]
         }
       ],
