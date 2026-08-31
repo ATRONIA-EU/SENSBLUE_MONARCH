@@ -1,3 +1,9 @@
+menu.UploadSpeed=Upload Speed
+menu.CPUFreq=CPU Frequency
+menu.FlashFreq=Flash Frequency
+menu.FlashMode=Flash Mode
+menu.PartitionScheme=Partition Scheme
+menu.DebugLevel=Core Debug Level
 ##############################################################
 # ATRONIA SensBlue Monarch
 # ESP32-WROOM-32E-N8 (8 MB flash, no PSRAM)
