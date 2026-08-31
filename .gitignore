@@ -1,5 +1,5 @@
-build/
-dist/
-*.tar.bz2
 .DS_Store
 .vscode/
+build/
+dist/
+*.zip

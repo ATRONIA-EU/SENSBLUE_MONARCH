@@ -1,8 +1,5 @@
 /*
  * 02_Read_Button — lights the green LED while the on-board button is pressed.
- *
- * The button is on GPIO4 with an internal pull-up; pressing pulls the pin
- * to ground. The library's readButton() inverts that so pressed == true.
  */
 
 #include <SensBlueMonarch.h>
@@ -18,7 +15,7 @@ void setup() {
 
 void loop() {
     bool pressed = SensBlueMonarch.readButton();
-    SensBlueMonarch.setLED(LED_GREEN, pressed);
+    SensBlueMonarch.setLED(SB_LED_GREEN, pressed);
 
     static bool wasPressed = false;
     if (pressed != wasPressed) {

@@ -1,14 +1,6 @@
 /*
  * 03_Digital_IO — mirrors isolated digital inputs on the isolated
- *                 digital outputs, and reports state changes over Serial.
- *
- * DIG_IN_1 / DIG_IN_2 are opto-isolated inputs (EL357N). Apply the input
- * voltage between the DIG_IN_x pin and its GND on the H9 / connector J1.
- * The on-board fuse trips at 30 mA — beyond that you must add external
- * current limiting.
- *
- * DIG_OUT_1 / DIG_OUT_2 are high-side switches (BCX56 + NPN). They drive
- * V_EXT to the load; ratings depend on the fuse populated in F-slots.
+ *                 digital outputs, and reports state changes on Serial.
  */
 
 #include <SensBlueMonarch.h>

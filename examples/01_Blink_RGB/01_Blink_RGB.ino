@@ -1,8 +1,6 @@
 /*
  * 01_Blink_RGB — cycles the on-board RGB LED through primary colours.
  *
- * ATRONIA SensBlue Monarch — HW rev 2.41
- *
  * The RGB LED sits on the PCAL6416A I2C expander, not on a direct GPIO,
  * so we must call SensBlueMonarch.begin() before touching it.
  */
@@ -22,12 +20,12 @@ void setup() {
 }
 
 void loop() {
-    SensBlueMonarch.setRGB(true,  false, false); delay(400);   // red
-    SensBlueMonarch.setRGB(false, true,  false); delay(400);   // green
-    SensBlueMonarch.setRGB(false, false, true);  delay(400);   // blue
-    SensBlueMonarch.setRGB(true,  true,  false); delay(400);   // yellow
-    SensBlueMonarch.setRGB(false, true,  true);  delay(400);   // cyan
-    SensBlueMonarch.setRGB(true,  false, true);  delay(400);   // magenta
-    SensBlueMonarch.setRGB(true,  true,  true);  delay(400);   // white
+    SensBlueMonarch.setRGB(true,  false, false); delay(400);
+    SensBlueMonarch.setRGB(false, true,  false); delay(400);
+    SensBlueMonarch.setRGB(false, false, true);  delay(400);
+    SensBlueMonarch.setRGB(true,  true,  false); delay(400);
+    SensBlueMonarch.setRGB(false, true,  true);  delay(400);
+    SensBlueMonarch.setRGB(true,  false, true);  delay(400);
+    SensBlueMonarch.setRGB(true,  true,  true);  delay(400);
     SensBlueMonarch.allLEDsOff();                delay(400);
 }
