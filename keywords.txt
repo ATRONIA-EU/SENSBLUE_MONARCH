@@ -3,6 +3,8 @@ SensBlueMonarchClass	KEYWORD1
 SensBlueLED		KEYWORD1
 SensBlueAnalogMode	KEYWORD1
 SensBlueUartTarget	KEYWORD1
+BatteryEstimator	KEYWORD1
+BatteryDebug_t		KEYWORD1
 
 begin			KEYWORD2
 setLED			KEYWORD2
@@ -17,23 +19,55 @@ readAnalogRaw		KEYWORD2
 enableVCC2		KEYWORD2
 enableVCC3		KEYWORD2
 enableBoost		KEYWORD2
+enable12V		KEYWORD2
 enableVBAT2		KEYWORD2
-setEepromWriteProtect	KEYWORD2
 readBatteryVoltage	KEYWORD2
 readPanelVoltage	KEYWORD2
 readUsbVoltage		KEYWORD2
 readOutputVoltage	KEYWORD2
 selectUart2		KEYWORD2
-getUart2Target		KEYWORD2
 rs485BeginTx		KEYWORD2
 rs485EndTx		KEYWORD2
 modemPowerOn		KEYWORD2
 modemPowerOff		KEYWORD2
 modemForceReset		KEYWORD2
+enableGNSS		KEYWORD2
 readButton		KEYWORD2
 writePiggybackIO	KEYWORD2
 writeExpanderBit	KEYWORD2
 readExpanderInputBit	KEYWORD2
+
+beginEnvSensor		KEYWORD2
+readTemperature		KEYWORD2
+readHumidity		KEYWORD2
+readPressure		KEYWORD2
+envSensorReady		KEYWORD2
+
+beginDisplay		KEYWORD2
+displayReady		KEYWORD2
+showStatusScreen	KEYWORD2
+
+beginEeprom		KEYWORD2
+eepromReady		KEYWORD2
+eepromWriteByte		KEYWORD2
+eepromReadByte		KEYWORD2
+eepromWrite		KEYWORD2
+eepromRead		KEYWORD2
+
+beginBattery		KEYWORD2
+readBatteryPercentage	KEYWORD2
+
+bme			KEYWORD2
+display			KEYWORD2
+battery			KEYWORD2
+
+update			KEYWORD2
+saveToNVS		KEYWORD2
+loadFromNVS		KEYWORD2
+reset			KEYWORD2
+setBatteryType		KEYWORD2
+getBatteryType		KEYWORD2
+getDebug		KEYWORD2
 
 SB_LED_RED		LITERAL1
 SB_LED_GREEN		LITERAL1
@@ -41,4 +75,6 @@ SB_LED_BLUE		LITERAL1
 SB_ANALOG_MODE_0_10V	LITERAL1
 SB_ANALOG_MODE_4_20MA	LITERAL1
 SB_UART2_RS485		LITERAL1
-SB_UART2_PIGGYBACK	LITERAL1
+SB_UART2_GNSS		LITERAL1
+BATTERY_TYPE_LIION	LITERAL1
+BATTERY_TYPE_LIFEPO4	LITERAL1
