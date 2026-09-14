@@ -56,7 +56,7 @@ and I²C addresses:
 ### Option 2 — ZIP install
 
 1. Download the latest ZIP from
-   [Releases](https://github.com/sensblue-monarch/SensBlueMonarch/releases).
+   [Releases](https://github.com/ATRONIA-EU/SENSBLUE_MONARCH/releases).
 2. Arduino IDE → **Sketch → Include Library → Add .ZIP Library…**
 3. Pick the ZIP.
 4. Install the Adafruit dependencies manually via **Manage Libraries**:
@@ -132,6 +132,14 @@ See the examples under `examples/` for concrete recipes:
 | 12_Battery_Percent | State-of-charge with the on-board algorithm |
 
 Full pinout in [`docs/pinout.md`](docs/pinout.md). Board schematics (JPG, one per sheet) are in [`docs/schematics/`](docs/schematics/README.md).
+
+## Documentation
+
+- **Preliminary datasheet** — [`docs/datasheet/SensBlueMonarch_Datasheet_v0.1.pdf`](docs/datasheet/SensBlueMonarch_Datasheet_v0.1.pdf) (16 pages, full technical reference)
+- **Product brief** — [`docs/brief/SensBlueMonarch_ProductBrief_v0.1.pdf`](docs/brief/SensBlueMonarch_ProductBrief_v0.1.pdf) (4 pages, features and applications)
+- **How it compares** — [`docs/compare/SensBlueMonarch_HowItCompares_v0.1.pdf`](docs/compare/SensBlueMonarch_HowItCompares_v0.1.pdf) (feature comparison against similar boards)
+- **Pinout reference** — [`docs/pinout.md`](docs/pinout.md)
+- **Schematics** — 11 JPG sheets in [`docs/schematics/`](docs/schematics/README.md)
 
 ## Known caveats
 
