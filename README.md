@@ -141,6 +141,12 @@ Full pinout in [`docs/pinout.md`](docs/pinout.md). Board schematics (JPG, one pe
 - **Pinout reference** — [`docs/pinout.md`](docs/pinout.md)
 - **Schematics** — 11 JPG sheets in [`docs/schematics/`](docs/schematics/README.md)
 
+## How it compares
+
+![Feature comparison against similar cellular IoT boards](docs/compare/comparison_table.png)
+
+Full comparison document (with tier categorisation and column definitions): [`docs/compare/SensBlueMonarch_HowItCompares_v0.1.pdf`](docs/compare/SensBlueMonarch_HowItCompares_v0.1.pdf).
+
 ## Known caveats
 
 - **PCAL6416A `!INT` and `!RESET` are not wired** to the ESP32 on
